@@ -1,54 +1,91 @@
-# React + TypeScript + Vite
+# Pokémon Search Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🧭 Interview Context
 
-Currently, two official plugins are available:
+Welcome! This repository serves as the **baseline project** for your upcoming **technical interview**.  
+Please **clone this repo before the interview** and set it up locally.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You are **free to fork and refactor** the application to your liking before the session — however, the codebase **must remain in TypeScript**.  
+The interview will focus on **expanding the functionality** of this Pokémon Search Application.
 
-## Expanding the ESLint configuration
+During the interview:
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- You’ll receive a **list of features to implement**. It’s **not expected** that you complete them all.
+  - The first feature will be to implement an actual search; the current app doesn't really "search" it just tries a request that may or may not work.
+- We value **code quality and maintainability** just as much as implementation speed.  
+- If you identify opportunities for cleanup or optimization, feel free to make improvements either **before** or **during** the session.  
+- The interview will be divided into two parts:  
+  - **First 45 minutes:** No AI assistance  
+  - **Final 45 minutes:** AI assistance permitted  
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+We’re interested in both your **core engineering skills** and your ability to **strategically leverage AI tools** in a real-world workflow.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 💻 Environment Expectations
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+During the session, you’ll be asked to **share your IDE and run the app locally**.  
+Please ensure your development environment is ready with Node and Yarn installed, and that the app runs correctly before the interview begins.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### 🧩 Preparation Guidance
+
+Familiarity with **React**, **TypeScript**, and **API-driven applications** will be helpful.  
+This project uses the **`pokemode-ts`** library — a TypeScript wrapper for the [PokéAPI](https://pokeapi.co/) that provides typed access and built-in caching.
+
+
+---
+
+## 🧱 Tech Stack
+
+- **React 18**  
+- **TypeScript**  
+- **Vite**  
+- **pokemode-ts** (typed PokéAPI wrapper with caching)  
+- **ESLint** for linting  
+- **Yarn** for package management  
+
+---
+
+## 🛠️ Setup & Installation
+
+1. **Clone the repository**
+
+   git clone https://github.com/williamsyang-work/PokemonSearchApplication.git  
+   cd PokemonSearchApplication
+
+2. **Install dependencies**
+
+   yarn install
+
+3. **Run the development server**
+
+   yarn dev  
+   (The app will run at http://localhost:5173)
+
+4. **Build for production**
+
+   yarn build
+
+5. **Preview the production build**
+
+   yarn preview
+
+---
+
+## 🧪 Linting
+
+To check for lint issues:  
+yarn lint  
+
+---
+
+## 🌎 API
+
+This app uses [PokéAPI](https://pokeapi.co/) through the **pokemode-ts** TypeScript wrapper, which provides  
+typed responses, internal caching, and a clean API interface.  
+No authentication or API key is required.
+
+---
+
+## 🧑‍💻 Author
+
+**Williams Yang**  
+GitHub: [@williamsyang-work](https://github.com/williamsyang-work)
